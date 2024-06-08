@@ -85,10 +85,10 @@ if skip_setup:
 
 # DBTITLE 1,Make sure your SP has read access to your Vector Search Index
 # TODO either kill or make it useful
-# index_name=f"{catalog}.{db}.databricks_documentation_vs_index"
-# host = "https://" + spark.conf.get("spark.databricks.workspaceUrl")
-# print(index_name, "is the vector search the demo is using")
-# test_demo_permissions(host, secret_scope="dbdemos", secret_key="rag_sp_token", vs_endpoint_name=VECTOR_SEARCH_ENDPOINT_NAME, index_name=index_name, embedding_endpoint_name="databricks-bge-large-en")
+index_name=f"{catalog}.{db}.databricks_documentation_vs_index"
+host = "https://" + spark.conf.get("spark.databricks.workspaceUrl")
+print(index_name, "is the vector search the demo is using")
+test_demo_permissions(host, secret_scope="dbdemos", secret_key="rag_sp_token", vs_endpoint_name=VECTOR_SEARCH_ENDPOINT_NAME, index_name=index_name, embedding_endpoint_name="databricks-bge-large-en")
 
 # COMMAND ----------
 
